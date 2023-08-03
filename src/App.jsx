@@ -7,7 +7,7 @@ import NewArticles from "./components/NewArticles";
 import ArticleList from "./components/ArticleList";
 
 function App() {
-  const [articlesData, setArticlesData] = useState("");
+  const [articlesData, setArticlesData] = useState([]);
 
   useEffect(() => {
     fetch(
@@ -16,21 +16,23 @@ function App() {
       .then((response) => response.json())
       .then((data) =>
         setArticlesData(
-          data.articles.filter((article,index)=>{
-            return index < 6
+          data.articles.filter((article, index) => {
+            return index < 6;
           })
         )
       );
   }, []);
 
-  console.log(articlesData);
+  //console.log(articlesData);
 
-  return (
+  return articlesData.length === 0 ? (
+    <h1>Loading</h1>
+  ) : (
     <>
       <Header />
-      <MainArticle />
-      <NewArticles />
-      <ArticleList />
+      <MainArticle mainArticle={articlesData[0]} />
+      <NewArticles newArticles={articlesData} />
+      <ArticleList articleList={articlesData} />
     </>
   );
 }
