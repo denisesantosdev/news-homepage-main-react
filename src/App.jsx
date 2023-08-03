@@ -17,7 +17,7 @@ function App() {
       .then((data) =>
         setArticlesData(
           data.articles.filter((article, index) => {
-            return index < 6;
+            return index < 7;
           })
         )
       );

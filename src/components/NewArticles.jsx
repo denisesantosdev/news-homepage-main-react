@@ -1,13 +1,13 @@
 export default function NewArticles(props) {
-  console.log(props.newArticles);
+  //console.log(props.newArticles);
 
   const newArticlesElement = props.newArticles
   .filter((item,index)=>{
     return index >= 1 && index <= 3
   })
-  .map((item) => {
+  .map((item, index) => {
     return (
-      <li className="new-articles__item">
+      <li className="new-articles__item" key={index}>
         <a href="#">
           <h3 className="new-articles__title">{item.title}</h3>
         </a>
