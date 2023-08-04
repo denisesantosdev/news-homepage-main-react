@@ -1,10 +1,11 @@
 import { React, useEffect, useState } from "react";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+
 import "./App.css";
 
 import Header from "./components/Header";
-import MainArticle from "./components/MainArticle";
-import NewArticles from "./components/NewArticles";
-import ArticleList from "./components/ArticleList";
+import Home from "./components/Home";
+import ArticlePage from "./components/ArticlePage";
 
 function App() {
   const [articlesData, setArticlesData] = useState([]);
@@ -25,14 +26,21 @@ function App() {
 
   //console.log(articlesData);
 
-  return articlesData.length === 0 ? (
-    <h1>Loading</h1>
-  ) : (
+  return (
     <>
       <Header />
-      <MainArticle mainArticle={articlesData[0]} />
-      <NewArticles newArticles={articlesData} />
-      <ArticleList articleList={articlesData} />
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path="/"
+            element={<Home articlesData={articlesData}/>}
+          />
+          <Route
+            path="/article/:title"
+            element={<ArticlePage articlesData={articlesData} />}
+          />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

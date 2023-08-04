@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 export default function ArticleList(props) {
   //console.log(props);
 
@@ -14,9 +16,11 @@ export default function ArticleList(props) {
           className="article-list__img"
         />
         <div className="article-list__text">
-          <a href="#">
-            <h2 className="article-list__title">{item.title}</h2>
-          </a>
+          
+            <Link to={`/article/${item.title}`}>
+              <h2 className="article-list__title">{item.title}</h2>
+            </Link>
+          
           <p className="article-list__description">
            {item.description}
           </p>
