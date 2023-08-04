@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 export default function MainArticle(props) {
-   //console.log(props)
+  //console.log(props)
 
   return (
     <section className="main-article">
@@ -11,13 +11,12 @@ export default function MainArticle(props) {
         className="main-article__img"
       />
       <div className="main-article__text">
-        <Link
-          to={`/article/${props.mainArticle[0].title}`}>
+        <Link to={`/article/${props.mainArticle[0].title}`}>
           <h1 className="main-article__title">{props.mainArticle[0].title}</h1>
         </Link>
         <div className="main-article__description">
-          <p>{props.mainArticle[0].description}</p>
-          <a href="#">Read More</a>
+          <p>{props.mainArticle[0].content}</p>
+          <Link to={`/article/${props.mainArticle[0].title}`}>Read More</Link>
         </div>
       </div>
     </section>

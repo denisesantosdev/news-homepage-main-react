@@ -1,7 +1,8 @@
 import { React, useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
-import "./App.css";
+import "./css/reset.css";
+import "./css/App.css";
 
 import Header from "./components/Header";
 import Home from "./components/Home";

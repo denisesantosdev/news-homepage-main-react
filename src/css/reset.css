@@ -1,0 +1,14 @@
+*, *:after, *:before {
+    box-sizing: border-box;
+    padding: 0;
+    outline: 1px solid red;
+}
+
+img {
+    display: inline-block;
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+}
