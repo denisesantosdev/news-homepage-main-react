@@ -1,0 +1,33 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+}
+
+.header__nav-wrapper {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.73);
+  inset: 0;
+  z-index: 1;
+  display: none;
+}
+
+.header__nav {
+  position: absolute;
+  right: 0;
+  z-index: 2;
+  background-color: white;
+  height: 100vh;
+  width: 70%;
+  padding: 1rem;
+}
+
+.header_logo {
+  width: 50px;
+}
+
+@media (min-width: 700px) {
+  .header__nav {
+    display: initial;
+  }
+}

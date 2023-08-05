@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 import "./css/reset.css";
 import "./css/App.css";
+import './components/Header.css'
 
 import Header from "./components/Header";
 import Home from "./components/Home";
