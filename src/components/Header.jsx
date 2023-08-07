@@ -1,16 +1,5 @@
 import React from "react";
 export default function Header() {
-  /* 
-        toggle menu:
-        toggleMenu state false
-        when open menu btn is clicked
-        setToggleMenu to true
-        when close  menu btn is clicked
-        setToggleMenu to flase
-        
-        if toggleMenu is true add class "show-menu" if false add nothing
-
-    */
   const [toggleMenu, setToggleMenu] = React.useState(false);
 
   return (
@@ -28,38 +17,35 @@ export default function Header() {
           alt=""
         />
       </button>
-
-      {toggleMenu && (
-        <div className="header__nav-wrapper">
-          <nav className="header__nav">
-            <button
-              className="header__close-menu-btn"
-              onClick={() => setToggleMenu(false)}>
-              <img
-                src="./src/assets/images/icon-menu-close.svg"
-                alt=""
-              />
-            </button>
-            <ul>
-              <li>
-                <a href="#">Home</a>
-              </li>
-              <li>
-                <a href="#">New</a>
-              </li>
-              <li>
-                <a href="#">Popular</a>
-              </li>
-              <li>
-                <a href="#">Trending</a>
-              </li>
-              <li>
-                <a href="#">Categories</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      )}
+      <div className={`header__nav-wrapper ${toggleMenu ? "show-menu" : ""}`}>
+        <nav className="header__nav">
+          <button
+            className="header__close-menu-btn"
+            onClick={() => setToggleMenu(false)}>
+            <img
+              src="./src/assets/images/icon-menu-close.svg"
+              alt=""
+            />
+          </button>
+          <ul>
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">New</a>
+            </li>
+            <li>
+              <a href="#">Popular</a>
+            </li>
+            <li>
+              <a href="#">Trending</a>
+            </li>
+            <li>
+              <a href="#">Categories</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
   );
 }
