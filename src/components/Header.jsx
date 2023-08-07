@@ -1,4 +1,18 @@
+import React from "react";
 export default function Header() {
+  /* 
+        toggle menu:
+        toggleMenu state false
+        when open menu btn is clicked
+        setToggleMenu to true
+        when close  menu btn is clicked
+        setToggleMenu to flase
+        
+        if toggleMenu is true add class "show-menu" if false add nothing
+
+    */
+  const [toggleMenu, setToggleMenu] = React.useState(false);
+
   return (
     <header className="header">
       <img
@@ -6,15 +20,21 @@ export default function Header() {
         alt="Website logo"
         className="header_logo"
       />
-      <button className="header__open-menu-btn">
+      <button
+        className="header__open-menu-btn"
+        onClick={() => setToggleMenu(true)}>
         <img
           src="./src/assets/images/icon-menu.svg"
           alt=""
         />
       </button>
-      <div className="header__nav-wrapper">
+
+      {toggleMenu && (
+        <div className="header__nav-wrapper">
           <nav className="header__nav">
-            <button className="header__close-menu-btn">
+            <button
+              className="header__close-menu-btn"
+              onClick={() => setToggleMenu(false)}>
               <img
                 src="./src/assets/images/icon-menu-close.svg"
                 alt=""
@@ -38,7 +58,8 @@ export default function Header() {
               </li>
             </ul>
           </nav>
-      </div>
+        </div>
+      )}
     </header>
   );
 }

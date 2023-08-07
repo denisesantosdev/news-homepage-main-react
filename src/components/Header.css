@@ -9,7 +9,7 @@
   background-color: rgba(0, 0, 0, 0.73);
   inset: 0;
   z-index: 1;
-  display: none;
+  top: 50px;
 }
 
 .header__nav {
