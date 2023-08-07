@@ -1,5 +1,7 @@
 import { React, useEffect, useState } from "react";
 
+import './Home.css'
+
 import MainArticle from "./MainArticle";
 import NewArticles from "./NewArticles";
 import ArticleList from "./ArticleList";
@@ -10,8 +12,10 @@ export default function Home(props) {
     <h1>Loading...</h1>
   ) : (
     <>
-      <MainArticle mainArticle={props.articlesData} />
-      <NewArticles newArticles={props.articlesData} />
+      <div className="grid">
+        <MainArticle mainArticle={props.articlesData} />
+        <NewArticles newArticles={props.articlesData} />
+      </div>
       <ArticleList articleList={props.articlesData} />
     </>
   );

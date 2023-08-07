@@ -29,7 +29,7 @@ function App() {
   //console.log(articlesData);
 
   return (
-    <>
+    <div className="container">
       <Header />
       <BrowserRouter>
         <Routes>
@@ -43,7 +43,7 @@ function App() {
           />
         </Routes>
       </BrowserRouter>
-    </>
+    </div>
   );
 }
 

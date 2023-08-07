@@ -1,0 +1,14 @@
+.grid {
+  display: grid;
+}
+
+@media (min-width: 700px) {
+  .grid {
+    grid-template-columns: 2fr 1fr;
+  }
+  
+  .article-list ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
