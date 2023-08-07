@@ -17,7 +17,9 @@ export default function Header() {
           alt=""
         />
       </button>
-      <div className={`header__nav-wrapper ${toggleMenu ? "show-menu" : ""}`}>
+      <div
+        className={`header__nav-wrapper ${toggleMenu ? "show-menu" : ""}`}
+        onClick={() => setToggleMenu(false)}>
         <nav className="header__nav">
           <button
             className="header__close-menu-btn"
