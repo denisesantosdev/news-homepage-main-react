@@ -48,4 +48,27 @@
   .header__open-menu-btn {
     display: none;
   }
+
+  .header__close-menu-btn {
+    display: none;
+  }
+
+  .header__nav-wrapper {
+    position: initial;
+    display: block;
+    background-color: transparent;
+  }
+
+  .header__nav {
+    position: initial;
+    background-color: white;
+    height: fit-content;
+    width: fit-content;
+    padding: 0;
+  }
+
+  .header__nav ul {
+    flex-direction: row;
+    margin: 0;
+  }
 }
