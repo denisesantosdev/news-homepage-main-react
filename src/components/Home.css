@@ -1,6 +1,10 @@
 .grid {
   display: grid;
-  gap: 1.5rem;
+  gap: 2rem;
+}
+
+.main-article {
+  margin-bottom: 2rem;
 }
 
 .main-article__text {
@@ -12,6 +16,21 @@
 
 .main-article__text * {
   margin: 0;
+}
+
+.main-article__description a {
+  background-color: var(--Soft-red);
+  color: var(--Off-white);
+  padding: 0.8rem 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.main-article__description a:hover {
+  background-color: var(--Very-dark-blue);
 }
 
 .main-article__title {
@@ -42,52 +61,58 @@
   color: var(--Grayish-blue);
 }
 
+.article-list {
+  margin-top: 4rem;
+}
 
+.article-list ul {
+  display: grid;
+  gap: 1rem;
+  counter-reset: list-items;
+}
+
+.article-list__item {
+  display: flex;
+  gap: 1rem;
+  counter-increment: list-items;
+}
+
+.article-list__img {
+  width: 150px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.article-list__title {
+  margin-top: 3rem;
+  position: relative;
+  font-size: 1rem;
+  color: var(--Very-dark-blue);
+}
+
+.article-list__title:hover {
+  color: var(--Soft-orange);
+}
+
+.article-list__title::before {
+  content: "0" counter(list-items);
+  position: absolute;
+  top: -3rem;
+  font-size: 40px;
+  font-weight: bold;
+  color: var(--Grayish-blue);
+}
 
 @media (min-width: 900px) {
   .grid {
     grid-template-columns: 2fr 1fr;
   }
 
-  .article-list {
-    margin-top: 2rem;
-  }
-
   .article-list ul {
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem;
-    counter-reset: list-items;
   }
 
   .main-article__text {
     grid-template-columns: 1fr 1fr;
   }
-
-  .article-list__item {
-    display: flex;
-    gap: 1rem;
-    counter-increment: list-items;
-  }
-
-  .article-list__img {
-    width: 100px;
-    height: 100%;
-    object-fit: cover;
-  }
-  .article-list__title {
-    margin-top: 3rem;
-    position: relative;
-  }
-
-  .article-list__title::before {
-    content: "0" counter(list-items);
-    position: absolute;
-    top: -3rem;
-    font-size: 40px;
-    font-weight: bold;
-    color: var(--Grayish-blue);
-  }
-
-  
 }

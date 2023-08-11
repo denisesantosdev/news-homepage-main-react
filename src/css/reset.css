@@ -1,7 +1,6 @@
 *, *:after, *:before {
     box-sizing: border-box;
     padding: 0;
-    outline: 1px solid red;
 }
 
 img {
@@ -24,4 +23,8 @@ button {
 
 button:focus {
     outline: 3px solid red;
+}
+
+p {
+    line-height: 1.7;
 }
