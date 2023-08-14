@@ -15,7 +15,7 @@ export default function MainArticle(props) {
           <h1 className="main-article__title">{props.mainArticle[0].title}</h1>
         </Link>
         <div className="main-article__description">
-          <p>{props.mainArticle[0].content}</p>
+          <p>{props.mainArticle[0].description}</p>
           <Link to={`/article/${props.mainArticle[0].title}`}>Read More</Link>
         </div>
       </div>
