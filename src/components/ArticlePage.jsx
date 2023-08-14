@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { React, useEffect, useState } from "react";
+import "./ArticlePage.css"
 
 export default function ArticlePage(props) {
   const params = useParams();
