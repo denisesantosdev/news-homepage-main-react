@@ -1,9 +1,15 @@
 import { Link } from "react-router-dom";
-import { useParams } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
 import { React, useEffect, useState } from "react";
 import "./ArticlePage.css"
 
 export default function ArticlePage(props) {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
   const params = useParams();
 
    const article = props.articlesData.find(
