@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 
 export default function ArticleList(props) {
-  //console.log(props);
 
   const articleListElement = props.articleList
     .filter((item, index) => {

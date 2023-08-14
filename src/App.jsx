@@ -14,7 +14,7 @@ function App() {
 
   useEffect(() => {
     fetch(
-      "https://saurav.tech/NewsAPI/top-headlines/category/technology/us.json"
+      "https://saurav.tech/NewsAPI/top-headlines/category/science/us.json"
     )
       .then((response) => response.json())
       .then((data) =>
@@ -25,8 +25,6 @@ function App() {
         )
       );
   }, []);
-
-  //console.log(articlesData);
 
   return (
     <div className="container">

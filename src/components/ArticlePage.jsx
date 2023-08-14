@@ -16,8 +16,6 @@ export default function ArticlePage(props) {
     (item) => item.title === params.title
   ); 
 
-  console.log(article);
-
   return (
     <article className="article-page">
       <Link

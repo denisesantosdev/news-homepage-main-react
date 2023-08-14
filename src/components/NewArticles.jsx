@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 
 export default function NewArticles(props) {
-  //console.log(props.newArticles);
 
   const newArticlesElement = props.newArticles
     .filter((item, index) => {
