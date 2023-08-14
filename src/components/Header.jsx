@@ -1,11 +1,12 @@
 import React from "react";
+
 export default function Header() {
   const [toggleMenu, setToggleMenu] = React.useState(false);
 
   return (
     <header className="header">
       <img
-        src="src/assets/images/logo.svg"
+        src="/logo.svg"
         alt="Website logo"
         className="header_logo"
       />
