@@ -4,7 +4,7 @@ export default function ArticleList(props) {
 
   const articleListElement = props.articleList
     .filter((item, index) => {
-      return index >= 4;
+      return index >= 4 && index < 7;
     })
     .map((item, index) => {
       return (
